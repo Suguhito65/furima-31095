@@ -2,16 +2,16 @@
 
 ## users テーブル
 
-| Column             | Type   | Options                 |
-| ------------------ | ------ | ----------------------- |
-| nickname           | string | null: false             |
-| email              | string | null: false             |
-| password           | string | null: false             |
-| last_name          | string | null: false             |
-| first_name         | string | null: false             |
-| last_name_reading  | string | null: false             |
-| first_name_reading | string | null: false             |
-| birthday_id        | date   | null: false, ActiveHash |
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| nickname           | string | null: false |
+| email              | string | null: false |
+| password           | string | null: false |
+| last_name          | string | null: false |
+| first_name         | string | null: false |
+| last_name_reading  | string | null: false |
+| first_name_reading | string | null: false |
+| birthday           | date   | null: false |
 
 ### Association
 
@@ -29,7 +29,7 @@
 | burden_id        | integer    | null: false, ActiveHash |
 | area_id          | integer    | null: false, ActiveHash |
 | delivery_days_id | integer    | null: false, ActiveHash |
-| price_id         | integer    | null: false, ActiveHash |
+| price            | integer    | null: false             |
 | user             | references | foreign: true           |
 
 ### Association
