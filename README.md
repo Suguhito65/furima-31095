@@ -2,42 +2,39 @@
 
 ## users テーブル
 
-| Column       | Type      | Options                 |
-| ----------   | ------    | ----------------------- |
-| nickname     | string    | null: false             |
-| email        | string    | null: false             |
-| password     | string    | null: false             |
-| name         | string    | null: false             |
-| name_reading | string    | null: false             |
-| year         | integer   | null: false, ActiveHash |
-| month        | integer   | null: false, ActiveHash |
-| day          | integer   | null: false, ActiveHash |
+| Column             | Type   | Options                 |
+| ------------------ | ------ | ----------------------- |
+| nickname           | string | null: false             |
+| email              | string | null: false             |
+| password           | string | null: false             |
+| last_name          | string | null: false             |
+| first_name         | string | null: false             |
+| last_name_reading  | string | null: false             |
+| first_name_reading | string | null: false             |
+| birthday_id        | date   | null: false, ActiveHash |
 
 ### Association
 
 - has_many :items
 - has_many :orders
-- has_many :addresses
 
 ## items テーブル
 
-| Column        | Type       | Options                 |
-| ----------    | ---------- | ----------------------- |
-| image         |            | ActiveStorage           |
-| product       | text       | null: false             |
-| description   | text       | null: false             |
-| category      | integer    | null: false, ActiveHash |
-| condition     | integer    | null: false, ActiveHash |
-| burden        | integer    | null: false, ActiveHash |
-| area          | integer    | null: false, ActiveHash |
-| delivery_days | integer    | null: false, ActiveHash |
-| price         | integer    | null: false, ActiveHash |
-| user          | references | foreign: true           |
+| Column           | Type       | Options                 |
+| ---------------- | ---------- | ----------------------- |
+| product          | string     | null: false             |
+| description      | text       | null: false             |
+| category_id      | integer    | null: false, ActiveHash |
+| condition_id     | integer    | null: false, ActiveHash |
+| burden_id        | integer    | null: false, ActiveHash |
+| area_id          | integer    | null: false, ActiveHash |
+| delivery_days_id | integer    | null: false, ActiveHash |
+| price_id         | integer    | null: false, ActiveHash |
+| user             | references | foreign: true           |
 
 ### Association
 
 - has_one :order
-- has_one :address
 - belongs_to :user
 
 ## orders テーブル
@@ -57,16 +54,14 @@
 
 | Column        | Type       | Options                    |
 | ------------- | ---------- | -------------------------- |
-| postal_code   | integer    | null: false                |
-| prefecture    | integer    | null: false, ActiveHash    |
+| postal_code   | string     | null: false                |
+| prefecture_id | integer    | null: false, ActiveHash    |
 | city          | string     | null: false                |
 | house_number  | string     | null: false                |
 | building_name | string     |                            |
-| phone_number  | integer    | null: false                |
-| user          | references | null: false, foreign: true |
+| phone_number  | string     | null: false                |
+| order         | references | null: false, foreign: true |
 
 ### Association
 
-- belongs_to :user
-- belongs_to :item
 - belongs_to :order
