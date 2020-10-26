@@ -4,13 +4,23 @@ class Item < ApplicationRecord
   belongs_to_active_hash :condition
   belongs_to_active_hash :burden
   belongs_to_active_hash :area
-  belongs_to_active_hash :DeliveryDay
+  belongs_to_active_hash :deliveryday
   has_one :order
   belongs_to :user
   has_one_attached :image
 
-  validates :product, :description, :category, :condition, :burden, :area, :delivery_days, :price, presence:true
-  # validates :price, format: { with: [3-9][0-9][0-9], message: "Out of setting range" }
+  with_options presence: true do
+    validates :product
+    validates :description
+    validates :category
+    validates :condition
+    validates :burden
+    validates :area
+    validates :deliveryday
+    validates :price,       numericality: { greater_than: 299, less_than: 10000000 , message: " Out of setting range"}
+  end
+
+  validates :price, format: { with: /\A[0-9]+\z/, message: "Half-width number" }
   # id:0以外の時に保存できる
-  validates :category_id, :condition_id, :burden_id, :area_id, :delivery_days_id, numericality: { other_than: 0 }
+  validates :category_id, :condition_id, :burden_id, :area_id, :deliveryday_id, numericality: { other_than: 0 }
 end

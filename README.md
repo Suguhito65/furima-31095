@@ -28,7 +28,7 @@
 | condition_id     | integer    | null: false, ActiveHash |
 | burden_id        | integer    | null: false, ActiveHash |
 | area_id          | integer    | null: false, ActiveHash |
-| delivery_days_id | integer    | null: false, ActiveHash |
+| deliveryday_id   | integer    | null: false, ActiveHash |
 | price            | integer    | null: false             |
 | user             | references | foreign_key: true       |
 
