@@ -39,27 +39,27 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Description can't be blank")
       end
       it "カテゴリーが---だと保存できない" do
-        @item.category_id = "0"
+        @item.category_id = 0
         @item.valid?
         expect(@item.errors.full_messages).to include("Category must be other than 0")
       end
       it "商品の状態が---だと保存できない" do
-        @item.condition_id = "0"
+        @item.condition_id = 0
         @item.valid?
         expect(@item.errors.full_messages).to include("Condition must be other than 0")
       end
       it "配送料の負担が---だと保存できない" do
-        @item.burden_id = "0"
+        @item.burden_id = 0
         @item.valid?
         expect(@item.errors.full_messages).to include("Burden must be other than 0")
       end
       it "発送元の地域が---だと保存できない" do
-        @item.area_id = "0"
+        @item.area_id = 0
         @item.valid?
         expect(@item.errors.full_messages).to include("Area must be other than 0")
       end
       it "発送までの日数が---だと保存できない" do
-        @item.deliveryday_id = "0"
+        @item.deliveryday_id = 0
         @item.valid?
         expect(@item.errors.full_messages).to include("Deliveryday must be other than 0")
       end
@@ -81,5 +81,3 @@ RSpec.describe Item, type: :model do
     end
   end
 end
-
-# bundle exec rspec spec/models/item_spec.rb
