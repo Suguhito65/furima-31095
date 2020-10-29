@@ -5,8 +5,12 @@ class OrdersController < ApplicationController
 
   def create
     @purchase = Purchase.new(purchase_params)
-    @purchase.save
-    redirect_to action: :index
+    if @purchase.valid?
+      @purchase.save
+      redirect_to root_path
+    else
+      render 'index'
+    end
   end
 
   private
