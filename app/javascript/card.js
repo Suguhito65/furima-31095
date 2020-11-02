@@ -1,5 +1,5 @@
 const pay = () => {
-  Payjp.setPublicKey("pk_test_c840f96e7ab4af3fe5d77096"); //PAY.JPテスト公開鍵
+  Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY); //PAY.JPテスト公開鍵
   const form = document.getElementById("charge-form");
   form.addEventListener("submit", (e) => {
     // Railsへのフォーム送信をキャンセル
@@ -35,5 +35,4 @@ const pay = () => {
 };
 
 window.addEventListener("load", pay);
-// authenticity_token
 // 4242424242424242

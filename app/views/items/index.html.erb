@@ -133,10 +133,10 @@
           <%= image_tag item.image, class: "item-img" %>
 
           <%# 商品購入機能実装後に実装 %>
-          <%# if %>
-          <%# <div class='sold-out'>
-            <span>Sold Out!!</span>
-          </div> %>
+          <%# if item.id == Order.find(params[:order_id]).item_id %>
+            <%# <div class='sold-out'>
+              <span>Sold Out!!</span>
+            </div> %>
           <%# end %>
 
         </div>
