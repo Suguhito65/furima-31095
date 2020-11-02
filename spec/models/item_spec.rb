@@ -64,12 +64,12 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Deliveryday must be other than 0")
       end
       it "価格が¥300未満だと保存できない" do
-        @item.price = "299"
+        @item.price = 299
         @item.valid?
         expect(@item.errors.full_messages).to include("Price  Out of setting range")
       end
       it "価格が¥9999999より上だと保存できない" do
-        @item.price = "10000000"
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price  Out of setting range")
       end
