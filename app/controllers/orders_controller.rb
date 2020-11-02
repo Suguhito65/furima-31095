@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   before_action :move_to_index, only: [:index, :create]
   def index
     @purchase = Purchase.new
+    @item = Item.find(params[:item_id])
   end
 
   def create
