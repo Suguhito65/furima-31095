@@ -16,5 +16,5 @@ class User < ApplicationRecord
     validates :first_name_reading, format: { with: /\A[ァ-ヶー－]+\z/, message: "Full-width katakana characters." }
   end
 
-  validates :password, format: { with: /\A[a-zA-Z0-9]+\d+\z/, message: "Include both letters and numbers" },length: { minimum: 6 }
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "Include both letters and numbers" },length: { minimum: 6 }
 end
