@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
 
   def create
     @purchase = Purchase.new(purchase_params)
+    @item = Item.find(params[:item_id])
     if @purchase.valid?
       pay_item
       @purchase.save
