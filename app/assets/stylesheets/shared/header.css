@@ -7,6 +7,10 @@
   padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .search-bar-contents {
