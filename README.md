@@ -1,3 +1,31 @@
+# アプリケーション名
+
+- FURIMA
+
+# URL
+
+- https://furima-31095.herokuapp.com/
+
+# テスト用アカウント
+
+## Basic認証のID/Pass
+
+- ID: suguhito
+- Pass: 0605
+
+## 投稿者用
+
+- メールアドレス: naoto@naoto.com
+- パスワード: suguhito
+
+# 開発環境
+
+- Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/MySQL 5.6/Github/Visual Studio Code/AWS（S3）/heroku
+
+# データベース設計
+
+![](https://i.gyazo.com/12fd72386e97138b5b3cb469781fe7d2.png)
+
 # テーブル設計
 
 ## users テーブル
