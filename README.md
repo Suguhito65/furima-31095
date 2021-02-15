@@ -22,7 +22,7 @@
 
 - Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/MySQL 5.6/Github/Visual Studio Code/AWS（S3）/heroku
 
-#使用画面のイメージ
+#　使用画面のイメージ
 
 ![](https://i.gyazo.com/9d4f5ecfcb63e86bd6d6f4683eb22154.jpg)
 
