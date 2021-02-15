@@ -20,7 +20,7 @@
 
 # 開発環境
 
-- Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/MySQL 5.6/Github/Visual Studio Code/AWS（S3）/heroku
+- Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/MySQL 5.6/Github/Visual Studio Code/AWS(S3)/heroku
 
 # 使用画面のイメージ
 
