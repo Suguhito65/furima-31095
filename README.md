@@ -16,11 +16,17 @@
 ## 投稿者用
 
 - メールアドレス: naoto@naoto.com
-- パスワード: suguhito
+- パスワード: suguhito65
 
 # 開発環境
 
 - Ruby 2.6.5/Ruby on Rails 6.0.0/JavaScript/MySQL 5.6/Github/Visual Studio Code/AWS（S3）/heroku
+
+#使用画面のイメージ
+
+![](https://i.gyazo.com/9d4f5ecfcb63e86bd6d6f4683eb22154.jpg)
+
+![](https://i.gyazo.com/1de372a255feccbee5da63caf39cc990.jpg)
 
 # データベース設計
 
